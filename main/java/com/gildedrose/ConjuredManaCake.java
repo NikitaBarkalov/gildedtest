@@ -9,9 +9,9 @@ public class ConjuredManaCake extends Item implements IUpdaterParameters{
     @Override
     public int updateQuality() {
         if (this.sellIn > 0){
-            return this.quality - 2;
+            return QualityValidator.isQualityNotNegative(this.quality - 2);
         }
-        return this.quality - 4;
+        return QualityValidator.isQualityNotNegative(this.quality - 4);
     }    
 
     @Override

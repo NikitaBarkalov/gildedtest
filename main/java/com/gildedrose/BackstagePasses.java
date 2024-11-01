@@ -8,13 +8,13 @@ public class BackstagePasses extends Item implements IUpdaterParameters {
     @Override
     public int updateQuality() {
         if (this.sellIn > 5 && this.sellIn <= 10) {
-            return this.quality + 2;
+            return QualityValidator.isQualityNotMoreThan50(this.quality + 2);
         } else if (this.sellIn >= 0 && this.sellIn <= 5) {
-            return this.quality + 3;
+            return QualityValidator.isQualityNotMoreThan50(this.quality + 3);
         } else if (this.sellIn < 0) {
             return 0;
         }    
-        return ++this.quality;
+        return QualityValidator.isQualityNotMoreThan50(++this.quality);
     }
 
     @Override
