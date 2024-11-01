@@ -7,13 +7,32 @@ public class BackstagePasses extends Item{
 
     @Override
     public int updateQuality() {
+        this.quality = updateQualityForSellInBetween5And10();
+        this.quality = updateQualityForSellInBetween0And5();
+        this.quality = updateQualityForSellInLessThan0();
+        this.quality = updateQualityForSellInMoreThan10();
+        return this.quality;
+    }
+
+    private int updateQualityForSellInBetween5And10(){
         if (this.sellIn > 5 && this.sellIn <= 10) {
-            return QualityValidator.validationNotMoreThan50Quality(this.quality + 2);
-        } else if (this.sellIn >= 0 && this.sellIn <= 5) {
-            return QualityValidator.validationNotMoreThan50Quality(this.quality + 3);
-        } else if (this.sellIn < 0) {
+            return QualityValidator.validateNotMoreThan50Quality(this.quality + 2);
+        }
+        return this.quality;
+    }
+    private int updateQualityForSellInBetween0And5(){
+        if (this.sellIn > 0 && this.sellIn <= 5) {
+            return QualityValidator.validateNotMoreThan50Quality(this.quality + 3);
+        }
+        return this.quality;
+    }
+    private int updateQualityForSellInLessThan0(){
+        if (this.sellIn <= 0) {
             return 0;
-        }    
-        return QualityValidator.validationNotMoreThan50Quality(++this.quality);
+        }
+        return this.quality;
+    }
+    private int updateQualityForSellInMoreThan10(){
+        return QualityValidator.validateNotMoreThan50Quality(++this.quality);
     }
 }
