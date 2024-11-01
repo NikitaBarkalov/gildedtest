@@ -1,24 +1,14 @@
 package com.gildedrose;
 
-public class AgedBrie extends Item implements IUpdaterParameters {
+public class AgedBrie extends Item{
     public AgedBrie(int sellIn, int quality) {
         super("Aged Brie", sellIn, quality);
     }
     @Override
     public int updateQuality() {
         if (this.sellIn > 0){
-            return QualityValidator.isQualityNotMoreThan50(++this.quality);
+            return QualityValidator.validationNotMoreThan50Quality(++this.quality);
         }
-        return QualityValidator.isQualityNotMoreThan50(this.quality + 2);
+        return QualityValidator.validationNotMoreThan50Quality(this.quality + 2);
     }
-
-    public int updateSellIn() {
-        return --this.sellIn;
-    }
-
-    public void updateParameters(){
-        this.quality = updateQuality();
-        this.sellIn = updateSellIn();
-    }
-
 }

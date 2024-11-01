@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-public class Sulfuras extends Item implements IUpdaterParameters{
+public class Sulfuras extends Item{
     public Sulfuras(int sellIn) {
         super("Sulfuras, Hand of Ragnaros", sellIn, 80);
     }
@@ -16,6 +16,7 @@ public class Sulfuras extends Item implements IUpdaterParameters{
         return this.sellIn;
     }
 
+    @Override
     public void updateParameters(){
         // do nothing because Sulfuras is a legendary item
     }

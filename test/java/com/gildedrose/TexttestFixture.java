@@ -5,9 +5,9 @@ public class TexttestFixture {
         System.out.println("OMGHAI!");
 
         Item[] items = new Item[] {
-                new CommonItem("+5 Dexterity Vest", 10, 20), //
+                new Item("+5 Dexterity Vest", 10, 20), //
                 new AgedBrie(0, 0), //
-                new CommonItem("Elixir of the Mongoose", 1, 1), //
+                new Item("Elixir of the Mongoose", 1, 1), //
                 new Sulfuras(1), //
                 new Sulfuras(-1),
                 new BackstagePasses(15, 20),

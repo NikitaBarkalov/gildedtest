@@ -14,7 +14,19 @@ public class Item {
         this.quality = quality;
     }
 
+    public int updateQuality(){
+        if (this.sellIn > 0) {
+            return QualityValidator.validationNotNegativeQuality(--this.quality);
+        }
+        return QualityValidator.validationNotNegativeQuality(this.quality - 2);
+    }
+    public int updateSellIn() {
+        return --this.sellIn;
+    }
+
     public void updateParameters() {
+        this.quality = updateQuality();
+        this.sellIn = updateSellIn();
     }
 
    @Override

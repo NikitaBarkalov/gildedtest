@@ -8,8 +8,8 @@ public class GildedRose {
     }
 
     public void updateAfterDay() {
-        for (int i = 0; i < items.length; i++) {
-            items[i].updateParameters();
+        for (Item item: items) {
+            item.updateParameters();
         }
         /* for (Item item: items) {
             if (!item.name.equals("Aged Brie")

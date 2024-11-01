@@ -9,9 +9,9 @@ public class CommonItem extends Item implements IUpdaterParameters {
     @Override
     public int updateQuality(){
         if (this.sellIn > 0) {
-            return QualityValidator.isQualityNotNegative(--this.quality);
+            return QualityValidator.validationNotNegativeQuality(--this.quality);
         }
-        return QualityValidator.isQualityNotNegative(this.quality - 2);
+        return QualityValidator.validationNotNegativeQuality(this.quality - 2);
     }
 
     @Override
