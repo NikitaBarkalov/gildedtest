@@ -1,7 +1,9 @@
-package com.gildedrose;
+package com.gildedrose.updaters;
+
+import com.gildedrose.items.Item;
 
 public class GildedRose {
-    Item[] items;
+    public Item[] items;
 
     public GildedRose(Item[] items) {
         this.items = items;

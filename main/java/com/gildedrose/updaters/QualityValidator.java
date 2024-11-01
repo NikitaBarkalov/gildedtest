@@ -1,4 +1,4 @@
-package com.gildedrose;
+package com.gildedrose.updaters;
 
 public class QualityValidator {
     public static int validateNotNegativeQuality(int quality){

@@ -1,4 +1,6 @@
-package com.gildedrose;
+package com.gildedrose.items;
+
+import com.gildedrose.updaters.*;
 
 public class BackstagePasses extends Item{
     public BackstagePasses(int sellIn, int quality) {
@@ -33,6 +35,9 @@ public class BackstagePasses extends Item{
         return this.quality;
     }
     private int updateQualityForSellInMoreThan10(){
-        return QualityValidator.validateNotMoreThan50Quality(++this.quality);
+        if (this.sellIn > 10) {
+            return QualityValidator.validateNotMoreThan50Quality(++this.quality);
+        }
+        return this.quality;
     }
 }
