@@ -21,7 +21,7 @@ public class CommonItem extends Item implements IUpdaterParameters {
 
     public void updateParameters() {
         this.quality = updateQuality();
-        this.sellIn = updateSellIn();
+        this.sellIn =updateSellIn();
     }
 
 }
