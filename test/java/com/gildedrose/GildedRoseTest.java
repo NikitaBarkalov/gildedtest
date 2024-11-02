@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-import com.gildedrose.updaters.GildedRose;
+import com.gildedrose.updaters.ParametersUpdater;
 
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +13,7 @@ class GildedRoseTest {
     @Test
     void foo() {
         Item[] items = new Item[] { new Item("foo", 0, 0) };
-        GildedRose app = new GildedRose(items);
+        ParametersUpdater app = new ParametersUpdater(items);
         app.updateAfterDay();
         assertEquals("foo", app.items[0].name);
     }

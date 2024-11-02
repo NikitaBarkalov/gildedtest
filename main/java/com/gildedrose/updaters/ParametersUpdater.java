@@ -2,10 +2,10 @@ package com.gildedrose.updaters;
 
 import com.gildedrose.items.Item;
 
-public class GildedRose {
+public class ParametersUpdater {
     public Item[] items;
 
-    public GildedRose(Item[] items) {
+    public ParametersUpdater(Item[] items) {
         this.items = items;
     }
 
