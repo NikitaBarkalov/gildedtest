@@ -9,10 +9,17 @@ public class BackstagePasses extends Item {
 
     @Override
     public int updateQuality() {
+        quality = updateQualityForSellInMoreThan10();
         quality = updateQualityForSellInBetween5And10();
         quality = updateQualityForSellInBetween0And5();
         quality = updateQualityForSellInLessThan0();
-        quality = updateQualityForSellInMoreThan10();
+        return quality;
+    }
+
+    private int updateQualityForSellInMoreThan10() {
+        if (sellIn > 10) {
+            return QualityValidator.validateNotMoreThan50Quality(++quality);
+        }
         return quality;
     }
 
@@ -25,7 +32,7 @@ public class BackstagePasses extends Item {
 
     private int updateQualityForSellInBetween0And5() {
         if (sellIn > 0 && sellIn <= 5) {
-            return QualityValidator.validateNotMoreThan50Quality(this.quality + 3);
+            return QualityValidator.validateNotMoreThan50Quality(quality + 3);
         }
         return quality;
     }
@@ -37,10 +44,4 @@ public class BackstagePasses extends Item {
         return quality;
     }
 
-    private int updateQualityForSellInMoreThan10() {
-        if (sellIn > 10) {
-            return QualityValidator.validateNotMoreThan50Quality(++quality);
-        }
-        return quality;
-    }
 }
