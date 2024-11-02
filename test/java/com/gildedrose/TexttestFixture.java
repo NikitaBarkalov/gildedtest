@@ -8,16 +8,16 @@ public class TexttestFixture {
         System.out.println("OMGHAI!");
 
         Item[] items = new Item[] {
-                new Item("+5 Dexterity Vest", 10, 20), //
+                new Item("+5 Dexterity Vest", 10, 20), 
                 new Item("+6 Dexterity Vest", 0, 5),
                 new Item("+7 Dexterity Vest", 1, 5),
                 new Item("+8 Dexterity Vest", 10, 0),
                 new Item("+9 Dexterity Vest", 0, 0),
-                new AgedBrie(10, 0), //
+                new AgedBrie(10, 0), 
                 new AgedBrie(0, 49),
                 new AgedBrie(0, 25),
                 new AgedBrie(10, 50),
-                new Sulfuras(1), //
+                new Sulfuras(1), 
                 new Sulfuras(-1),
                 new BackstagePasses(15, 20),
                 new BackstagePasses(15, 50),
@@ -35,15 +35,11 @@ public class TexttestFixture {
                 new ConjuredManaCake(1, 10),
                 new ConjuredManaCake(0, 10),
                 new ConjuredManaCake(0, 2)
-             };
+        };
 
         ParametersUpdater app = new ParametersUpdater(items);
 
         int days = 5;
-        /* if (args.length > 0) {
-            days = Integer.parseInt(args[0]) + 1;
-        } */
-
         for (int numberDay = 0; numberDay < days; numberDay++) {
             Printer.printItems(items, numberDay);
             app.updateAfterDay();

@@ -16,23 +16,24 @@ public class Item {
         this.quality = quality;
     }
 
-    public int updateQuality(){
-        if (this.sellIn > 0) {
-            return QualityValidator.validateNotNegativeQuality(--this.quality);
+    public int updateQuality() {
+        if (sellIn > 0) {
+            return QualityValidator.validateNotNegativeQuality(--quality);
         }
-        return QualityValidator.validateNotNegativeQuality(this.quality - 2);
+        return QualityValidator.validateNotNegativeQuality(quality - 2);
     }
+
     public int updateSellIn() {
-        return --this.sellIn;
+        return --sellIn;
     }
 
     public void updateParameters() {
-        this.quality = updateQuality();
-        this.sellIn = updateSellIn();
+        quality = updateQuality();
+        sellIn = updateSellIn();
     }
 
-   @Override
-   public String toString() {
-        return this.name + ", " + this.sellIn + ", " + this.quality;
+    @Override
+    public String toString() {
+        return name + ", " + sellIn + ", " + quality;
     }
 }
