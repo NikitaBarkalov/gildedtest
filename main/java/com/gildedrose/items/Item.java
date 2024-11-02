@@ -1,6 +1,6 @@
 package com.gildedrose.items;
 
-import com.gildedrose.updaters.*;
+import com.gildedrose.additionalFeatures.*;
 
 public class Item {
 

@@ -1,7 +1,7 @@
 package com.gildedrose;
 
+import com.gildedrose.additionalFeatures.*;
 import com.gildedrose.items.*;
-import com.gildedrose.updaters.*;
 
 public class TexttestFixture {
     public static void main(String[] args) {
@@ -45,7 +45,7 @@ public class TexttestFixture {
         } */
 
         for (int numberDay = 0; numberDay < days; numberDay++) {
-            Updater.printItems(items, numberDay);
+            Printer.printItems(items, numberDay);
             app.updateAfterDay();
         }
     }

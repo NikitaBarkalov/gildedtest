@@ -1,9 +1,8 @@
 package com.gildedrose;
 
-import com.gildedrose.updaters.ParametersUpdater;
-
 import org.junit.jupiter.api.Test;
 
+import com.gildedrose.additionalFeatures.ParametersUpdater;
 import com.gildedrose.items.Item;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

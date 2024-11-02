@@ -1,6 +1,6 @@
 package com.gildedrose.items;
 
-import com.gildedrose.updaters.QualityValidator;
+import com.gildedrose.additionalFeatures.QualityValidator;
 
 public class AgedBrie extends Item{
     public AgedBrie(int sellIn, int quality) {

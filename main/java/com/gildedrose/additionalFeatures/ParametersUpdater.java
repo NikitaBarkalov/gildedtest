@@ -1,4 +1,4 @@
-package com.gildedrose.updaters;
+package com.gildedrose.additionalFeatures;
 
 import com.gildedrose.items.Item;
 

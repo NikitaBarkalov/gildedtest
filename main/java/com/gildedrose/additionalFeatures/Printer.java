@@ -1,8 +1,8 @@
-package com.gildedrose.updaters;
+package com.gildedrose.additionalFeatures;
 
 import com.gildedrose.items.*;
 
-public class Updater {
+public class Printer {
     public static void printItems(Item[] items, int dayNumber) {
         System.out.println("-------- day " + dayNumber + " --------");
         System.out.println("name, sellIn, quality");
